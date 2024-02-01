@@ -1,0 +1,22 @@
+﻿@using PerfilActores.Data
+
+
+<head>
+    <link rel="stylesheet" href="C:\proyectos-0022\PeliculasBlazor\PeliculasBlazor\Styles\ActorCard.css" />
+</head>
+
+<div class="mb-2">
+    <div class="card" style="width: 16rem;">
+        <img src="data:image/[formato];base64,@Actor.Foto" class="card-img-top" alt="Foto del actor">
+        <div class="card-body">
+            <h5 class="card-title">@Actor.Nombre</h5>
+            <p class="card-text">@Actor.Biografia</p>
+            <a href="#" class="btn btn-primary">Ver Detalles del Actor</a>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Actor Actor { get; set; } = new Actor();
+}
