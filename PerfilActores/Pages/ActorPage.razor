@@ -1,0 +1,33 @@
+﻿@page "/actorpage"
+@using PerfilActores.Data
+
+
+
+<h3>Bienvenidos al Perfil de Actores</h3>
+
+@foreach (var actor in ActorList)
+{
+    <PeliculasBlazor.Pages.Componentes.ActorCard Actor="actor" />
+}
+
+@code {
+    List<Actor> ActorList;
+
+    protected override void OnInitialized()
+    {
+        ActorList = ObtenerListaDeActores();
+    }
+
+    
+    List<Actor> ObtenerListaDeActores()
+    {
+        return new List<Actor>
+        {
+            new Actor { Nombre = "Victor German", Biografia = "Víctor es un actor talentoso conocido por su versatilidad y carisma en la pantalla, destacándose por interpretaciones cautivadoras y memorables en diversas producciones cinematográficas y televisivas.", Foto = "" },
+            
+            new Actor { Nombre = "Yunior Padilla", Biografia = "Yunior, actor destacado por su energía magnética y habilidades expresivas, ofrece actuaciones cautivadoras que cautivan al público con su presencia carismática y versatilidad.", Foto = "" },
+            
+        };
+    }
+}
+
