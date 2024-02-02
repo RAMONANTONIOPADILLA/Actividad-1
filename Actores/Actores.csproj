@@ -6,12 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="Pages\ActorPage.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Pages\ActorPage.razor" />
-  </ItemGroup>
-
 </Project>
