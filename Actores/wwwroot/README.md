@@ -10,5 +10,5 @@ En la clase Actor como podra notar representa la estructura de los datos para el
 ### AutoCaerd.razor.css
 definen la apariencia visual del componente ActorCard.razor
 
-### Nota
+### Nota ...
 las imagenes no se quieren mostrar a la hora de compilar por eso no las pusimos en el codigo pero si estan en el proyecto.

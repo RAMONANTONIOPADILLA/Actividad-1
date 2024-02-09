@@ -2,6 +2,7 @@
 @using Actores.Data
 @using Actores.Pages.Componentes
 
+
 <div class="actor-list">
     <h1 class="title">Bienvenidos al perfil actores</h1>
     <div class="actor-container">
@@ -18,6 +19,21 @@
         }
     </div>
 </div>
+=======
+<h3>Bienvenidos al Perfil Actores</h3>
+
+@if (ActorList != null)
+{
+    @foreach (var actor in ActorList)
+    {
+        <ActorCard Actor="actor" />
+    }
+}
+else
+{
+    <p>Cargando actores...</p>
+}
+>>>>>>> 94be2e0f8604d7cbb66dc2ed14aa1c7b21645396
 
 @code {
     List<Actor> ActorList;
