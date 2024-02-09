@@ -1,18 +1,12 @@
-﻿﻿@using Actores.Data
+﻿@using Actores.Data
 
-<div class="mb-2">
-    <div class="card-header">
-        <span class="card-title">
-           
-        </span>
-    </div>
-    <div class="card" style="width: 16rem;">
-        <img src="data:image/[formato];base64,@Actor.Foto" class="card-img-top" alt="Foto del actor">
-        <div class="card-body">
-            <h5 class="card-title">@Actor.Nombre</h5>
-            <p class="card-text">@Actor.Biografia</p>
-            <a href="#" class="btn btn-primary">Ver Detalles del Actor</a>
-        </div>
+<div class="actor-card">
+    <h2></h2>
+    <img src="@Actor.Foto" class="card-img-top" alt="Foto del actor">
+    <div class="card-body">
+        <h5 class="card-title">@Actor.Nombre</h5>
+        <p class="card-text">@Actor.Biografia</p>
+        <a href="#" class="btn btn-primary">Mas Detalles del Actor</a>
     </div>
 </div>
 

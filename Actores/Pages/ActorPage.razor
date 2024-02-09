@@ -2,19 +2,22 @@
 @using Actores.Data
 @using Actores.Pages.Componentes
 
-<h3>Bienvenidos al Perfil Actores</h3>
-
-@if (ActorList != null)
-{
-    @foreach (var actor in ActorList)
-    {
-        <ActorCard Actor="actor" />
-    }
-}
-else
-{
-    <p>Cargando actores...</p>
-}
+<div class="actor-list">
+    <h1 class="title">Bienvenidos al perfil actores</h1>
+    <div class="actor-container">
+        @if (ActorList != null)
+        {
+            @foreach (var actor in ActorList)
+            {
+                <ActorCard Actor="actor" />
+            }
+        }
+        else
+        {
+            <p>Cargando actores...</p>
+        }
+    </div>
+</div>
 
 @code {
     List<Actor> ActorList;
@@ -28,10 +31,10 @@ else
     {
         return new List<Actor>
         {
-            new Actor { Nombre = "Victor German", Biografia = "Víctor es un actor talentoso conocido por su versatilidad y carisma en la pantalla, destacándose por interpretaciones cautivadoras y memorables en diversas producciones cinematográficas y televisivas.", Foto = "" },
-            
-            new Actor { Nombre = "Yunior Padilla", Biografia = "Yunior, actor destacado por su energía magnética y habilidades expresivas, ofrece actuaciones cautivadoras que cautivan al público con su presencia carismática y versatilidad.", Foto = "" },
-            
+            new Actor { Nombre = "Victor German", Biografia = "Víctor es un actor talentoso conocido por su versatilidad y carisma en la pantalla, destacándose por interpretaciones cautivadoras y memorables en diversas producciones cinematográficas y televisivas.", Foto = "/img/victor-german.jpg" },
+
+            new Actor { Nombre = "Yunior Padilla", Biografia = "Yunior, actor destacado por su energía magnética y habilidades expresivas, ofrece actuaciones cautivadoras que cautivan al público con su presencia carismática y versatilidad.", Foto = "/img/yunior-padilla.jpg" },
         };
     }
 }
+

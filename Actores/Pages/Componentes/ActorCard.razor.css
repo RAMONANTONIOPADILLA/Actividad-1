@@ -1,39 +1,28 @@
 ﻿
-h3 {
+.h2 {
     color: #3498db;
-    background-color: #3498db;
+    background-color: #ff0000;
     font-family: 'Arial', sans-serif;
 }
 
-
-label {
-    display: block;
-    margin-bottom: 5px;
+.card-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000; 
+    margin-top: 10px; 
 }
 
-input,
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+.card-title {
+    color: #000000;
+    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+    border-bottom: 1px solid #000; 
 }
 
-button {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-    button:hover {
-        background-color: #2980b9;
-    }
-
-/* ActorCardStyles.css */
 
 
+    
 .actor-card {
     display: inline-block;
     margin: 120px;
@@ -52,12 +41,7 @@ button {
     color: #555;
 }
 
-.btn-primary {
-    background-color: #3498db;
-    border-color: #3498db;
+.actor-card {
+    margin: 10px; /* Ajusta el espacio entre los actores */
 }
 
-    .btn-primary:hover {
-        background-color: #2980b9;
-        border-color: #2980b9;
-    }

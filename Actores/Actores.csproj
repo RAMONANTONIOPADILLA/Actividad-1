@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Imagenes\depp_pirates %281%29.jpg" />
+    <None Include="wwwroot\Imagenes\pantera.jpg" />
+  </ItemGroup>
+
 </Project>
