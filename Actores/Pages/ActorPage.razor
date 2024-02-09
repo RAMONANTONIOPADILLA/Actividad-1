@@ -2,9 +2,8 @@
 @using Actores.Data
 @using Actores.Pages.Componentes
 
-
 <div class="actor-list">
-    <h1 class="title">Bienvenidos al perfil actores</h1>
+    <h2 class="title">Bienvenidos al perfil actores</h2>
     <div class="actor-container">
         @if (ActorList != null)
         {
@@ -19,32 +18,21 @@
         }
     </div>
 </div>
-=======
-<h3>Bienvenidos al Perfil Actores</h3>
-
-@if (ActorList != null)
-{
-    @foreach (var actor in ActorList)
-    {
-        <ActorCard Actor="actor" />
-    }
-}
-else
-{
-    <p>Cargando actores...</p>
-}
->>>>>>> 94be2e0f8604d7cbb66dc2ed14aa1c7b21645396
 
 @code {
     List<Actor> ActorList;
 
     protected override void OnInitialized()
     {
-        ActorList = ObtenerListaDeActores();
+        if (ActorList == null)
+        {
+            ActorList = ObtenerListaDeActores();
+        }
     }
 
     List<Actor> ObtenerListaDeActores()
     {
+        // Aquí debes obtener y devolver la lista de actores sin duplicados
         return new List<Actor>
         {
             new Actor { Nombre = "Victor German", Biografia = "Víctor es un actor talentoso conocido por su versatilidad y carisma en la pantalla, destacándose por interpretaciones cautivadoras y memorables en diversas producciones cinematográficas y televisivas.", Foto = "/img/victor-german.jpg" },
@@ -53,4 +41,3 @@ else
         };
     }
 }
-
