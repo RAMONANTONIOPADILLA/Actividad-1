@@ -2,15 +2,15 @@
 
 <div class="actor-card">
     <h2></h2>
-    <img src="@Actor.Foto" class="card-img-top" alt="Foto del actor">
+    <img src="@ActorP.FotoUrl" class="card-img-top" alt="Foto del actor" width="300px" height="200px"/>
     <div class="card-body">
-        <h5 class="card-title">@Actor.Nombre</h5>
-        <p class="card-text">@Actor.Biografia</p>
+        <h5 class="card-title">@ActorP.Nombre</h5>
+        <p class="card-text">@ActorP.Biografia</p>
         <a href="#" class="btn btn-primary">Mas Detalles del Actor</a>
     </div>
 </div>
 
 @code {
     [Parameter]
-    public Actor Actor { get; set; } = new Actor();
+    public Actores.Data.Actor ActorP { get; set; } = new Actores.Data.Actor ();
 }

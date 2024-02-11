@@ -5,16 +5,9 @@
 <div class="actor-list">
     <h2 class="title">Bienvenidos al perfil actores</h2>
     <div class="actor-container">
-        @if (ActorList != null)
+        @foreach (var actor in ActorList)
         {
-            @foreach (var actor in ActorList)
-            {
-                <ActorCard Actor="actor" />
-            }
-        }
-        else
-        {
-            <p>Cargando actores...</p>
+            <ActorCard Actor="actor" />
         }
     </div>
 </div>
@@ -24,20 +17,12 @@
 
     protected override void OnInitialized()
     {
-        if (ActorList == null)
+        ActorList = new List<Actor>
         {
-            ActorList = ObtenerListaDeActores();
-        }
-    }
-
-    List<Actor> ObtenerListaDeActores()
-    {
-        
-        return new List<Actor>
-        {
-            new Actor { Nombre = "Victor German", Biografia = "Víctor es un actor talentoso conocido por su versatilidad y carisma en la pantalla, destacándose por interpretaciones cautivadoras y memorables en diversas producciones cinematográficas y televisivas.", Foto = "/img/victor-german.jpg" },
-
-            new Actor { Nombre = "Yunior Padilla", Biografia = "Yunior, actor destacado por su energía magnética y habilidades expresivas, ofrece actuaciones cautivadoras que cautivan al público con su presencia carismática y versatilidad.", Foto = "/img/yunior-padilla.jpg" },
+            new Actor { Nombre = "Victor German", Biografia = "Víctor es un actor talentoso conocido por su versatilidad y carisma en la pantalla, destacándose por interpretaciones cautivadoras y memorables en diversas producciones cinematográficas y televisivas.", FotoUrl = "https://lh3.googleusercontent.com/proxy/3Z4TBlA0f9goZLUmhAK-TusF97i8YL0P9CAXKezCYpHKj7cmEaa3uwQlkX01lDPUOuLJ1d01GxlyY13bUbI9P1MMl-JMhbDGTUxGhBl46qV6yDpAV8BQQkq_36uW8ocPv6RGE4NTZCTu99Y" },
+            new Actor { Nombre = "Yunior Padilla", Biografia = "Yunior, actor destacado por su energía magnética y habilidades expresivas, ofrece actuaciones cautivadoras que cautivan al público con su presencia carismática y versatilidad.", FotoUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVhDnbofoOYYH3xilg3pMFYuH7RLjp1vDiTg&usqp=CAU" }
         };
     }
 }
+
+
